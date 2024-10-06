@@ -45,7 +45,7 @@
           "scale": {
             "type": "threshold",
             "domain": [1e4, 5e4, 1e5, 5e5],
-            "range": ["#FFD700", "#FFEB3B", "#B8860B", "#D4AF37"]
+            "range": ["#FFEB3B", "#FFD700","#D4AF37","#B8860B"]
           }
         },
         "tooltip": [
