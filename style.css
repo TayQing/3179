@@ -1,0 +1,26 @@
+body {
+    font-family: 'Times New Roman';  
+    background-color: #fffde5;  
+  }
+  
+  h1 {
+    color: #BD9B16;  
+    text-align: center;  
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .graph-container {
+    margin: 20px;
+    width: 80%;
+  }
+  
+  h2 {
+    color: #BD9B16;  
+  }
+  

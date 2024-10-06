@@ -57,6 +57,7 @@
       }
     ],
     "config": {
+      
       "legend": {
         "title": "Wealth in Millions",
         "orient": "bottom-right"
