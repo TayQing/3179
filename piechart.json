@@ -1,0 +1,47 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 300,
+    "height": 300,
+    "description": "Pie chart showing the distribution of male and female billionaires.",
+    "config": {"background": "#202020d6"},
+    "data": {
+      "url": "https://raw.githubusercontent.com/TayQing/3179/refs/heads/main/Billionaires%20Statistics%20Dataset%202.csv",
+      "format": {"type": "csv"}
+    },
+    "transform": [
+      {
+        "calculate": "datum.gender == 'M' ? 'Male' : 'Female'",
+        "as": "gender_label"
+      },
+      {
+        "aggregate": [{"op": "count", "as": "count"}],
+        "groupby": ["gender_label"]
+      }
+    ],
+    "mark": {"type": "arc", "tooltip": true},
+    "encoding": {
+      "theta": {"field": "count", "type": "quantitative"},
+      "color": {
+        "field": "gender_label",
+        "type": "nominal",
+        "scale": {
+          "domain": ["Male", "Female"],
+          "range": ["#2e7686", "#f59332"]
+        },
+        "legend": {
+          "title": "Gender",
+          "titleColor": "#b79941",
+          "titleFont": "Didot",
+          "titleFontSize": 15,
+          "labelFont": "Didot",      
+          "labelColor": "#a4a3a0",    
+          "labelFontSize": 10    
+        }
+      },
+      "tooltip": [
+        {"field": "gender_label", "type": "nominal", "title": "Gender"},
+        {"field": "count", "type": "quantitative", "title": "Number of Billionaires"}
+      ]
+    }
+  }
+  
