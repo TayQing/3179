@@ -1,13 +1,23 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 700,
+  "width": 800,
   "height": 400,
-  "title": {"text": "Total Wealth of Billionaires by Country and Category"},
+  "config": {"background": "#202020d6"},
+  "title": {
+    "text": "Total Wealth of Billionaires by Country and Category",
+    "anchor": "start",
+    "color": "#ead66a",
+    "fontSize": 30,
+    "font": "Didot"
+  },
   "data": {
     "url": "https://raw.githubusercontent.com/TayQing/3179/refs/heads/main/Billionaires%20Statistics%20Dataset%202.csv",
     "format": {"type": "csv"}
   },
   "transform": [
+    {
+      "filter": "datum.country == 'United States' || datum.country == 'China' || datum.country == 'India' || datum.country == 'France' || datum.country == 'Germany' || datum.country == 'Switzerland' || datum.country == 'United Kingdom' || datum.country == 'Russia' || datum.country == 'Hong Kong' || datum.country == 'Canada'"
+    },
     {
       "aggregate": [{"op": "sum", "field": "finalWorth", "as": "total_wealth"}],
       "groupby": ["country", "category"]
@@ -15,19 +25,40 @@
   ],
   "layer": [
     {
-      "mark": {"type": "bar"},
+      "mark": {
+        "type": "bar",
+        "width": {"band": 0.6}  // adjust the width of the bar
+      },
       "encoding": {
         "x": {
           "field": "country",
           "type": "nominal",
           "title": "Country",
-          "sort": "y"
+          "sort": "y",
+          "axis": {
+            "grid": false,
+            "titleColor": "#b79941",
+            "titleFont": "Didot",
+            "titleFontSize": 18,
+            "labelColor": "#a4a3a0",
+            "labelFont": "Didot",
+            "labelFontSize": 10,
+            "labelAngle": 360
+          }
         },
         "y": {
           "field": "total_wealth",
           "type": "quantitative",
           "title": "Total Wealth (in billions)",
-          "axis": {"grid": false},
+          "axis": {
+            "grid": false,
+            "titleColor": "#b79941",
+            "titleFont": "Didot",
+            "titleFontSize": 18,
+            "labelColor": "#a4a3a0",
+            "labelFont": "Didot",
+            "labelFontSize": 10
+          },
           "scale": {"domain": [0, 4500000]}
         },
         "color": {
@@ -75,7 +106,15 @@
               "#F0DC82"
             ]
           },
-          "title": "Category"
+          "title": "Category",
+          "legend": {
+            "titleFont": "Didot",         // Set legend title font
+            "titleColor": "#b79941",    // Set legend title color
+            "titleFontSize": 15,        // Set legend title font size
+            "labelFont": "Didot",       // Set legend label font
+            "labelColor": "#a4a3a0",     // Set legend label color
+            "labelFontSize": 9          // Set legend label font size
+          }
         },
         "tooltip": [
           {"field": "country", "type": "nominal", "title": "Country"},
@@ -89,6 +128,5 @@
         ]
       }
     }
-  ],
-  "config": {"background": "#fffde5"}
+  ]
 }
