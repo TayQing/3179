@@ -1,0 +1,160 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+     "title": {
+      "text": "Top 10 Countries by Total Billionaire Wealth",
+      "anchor": "start",     // Align title to the left
+      "color": "#ead66a",  // Change title color to gold
+      "fontSize": 30,        // Change title font size
+      "font": "Didot"
+    },
+    "config": {
+      "view": {"stroke": null},         // Remove the border stroke
+      "background": "#202020d6",},  //background colour
+    "width": 900,
+    "height": 400,
+    "data": {
+      "values": [
+        {"country": "United States", "finalWorth": 100},
+        {"country": "United States", "finalWorth": 200},
+        {"country": "United States", "finalWorth": 300},
+        {"country": "United States", "finalWorth": 400},
+        {"country": "United States", "finalWorth": 500},
+        {"country": "United States", "finalWorth": 600},
+        {"country": "United States", "finalWorth": 700},
+        {"country": "United States", "finalWorth": 800},
+        {"country": "United States", "finalWorth": 900},
+        {"country": "United States", "finalWorth": 1000},
+        {"country": "United States", "finalWorth": 1100},
+        {"country": "United States", "finalWorth": 1200},
+        {"country": "United States", "finalWorth": 1300},
+        {"country": "United States", "finalWorth": 1400},
+        {"country": "United States", "finalWorth": 1500},
+        {"country": "United States", "finalWorth": 1600},
+        {"country": "United States", "finalWorth": 1700},
+        {"country": "United States", "finalWorth": 1800},
+        {"country": "United States", "finalWorth": 1900},
+        {"country": "United States", "finalWorth": 2000},
+        {"country": "United States", "finalWorth": 2100},
+        {"country": "United States", "finalWorth": 2200},
+        {"country": "United States", "finalWorth": 2300},
+        {"country": "United States", "finalWorth": 2400},
+        {"country": "United States", "finalWorth": 2500},
+        {"country": "United States", "finalWorth": 2600},
+        {"country": "United States", "finalWorth": 2700},
+        {"country": "United States", "finalWorth": 2800},
+        {"country": "United States", "finalWorth": 2900},
+        {"country": "United States", "finalWorth": 3000},
+        {"country": "United States", "finalWorth": 3100},
+        {"country": "United States", "finalWorth": 3200},
+        {"country": "United States", "finalWorth": 3300},
+        {"country": "United States", "finalWorth": 3400},
+        {"country": "United States", "finalWorth": 3500},
+        {"country": "United States", "finalWorth": 3600},
+        {"country": "United States", "finalWorth": 3700},
+        {"country": "United States", "finalWorth": 3800},
+        {"country": "United States", "finalWorth": 3900},
+        {"country": "United States", "finalWorth": 4000},
+        {"country": "United States", "finalWorth": 4100},
+        {"country": "United States", "finalWorth": 4200},
+        {"country": "United States", "finalWorth": 4300},
+        {"country": "United States", "finalWorth": 4400},
+        {"country": "United States", "finalWorth": 4500},
+        {"country": "United States", "finalWorth": 4575},
+        {"country": "China", "finalWorth": 100},
+        {"country": "China", "finalWorth": 200},
+        {"country": "China", "finalWorth": 300},
+        {"country": "China", "finalWorth": 400},
+        {"country": "China", "finalWorth": 500},
+        {"country": "China", "finalWorth": 600},
+        {"country": "China", "finalWorth": 700},
+        {"country": "China", "finalWorth": 800},
+        {"country": "China", "finalWorth": 900},
+        {"country": "China", "finalWorth": 1000},
+        {"country": "China", "finalWorth": 1100},
+        {"country": "China", "finalWorth": 1200},
+        {"country": "China", "finalWorth": 1300},
+        {"country": "China", "finalWorth": 1400},
+        {"country": "China", "finalWorth": 1500},
+        {"country": "China", "finalWorth": 1600},
+        {"country": "China", "finalWorth": 1700},
+        {"country": "China", "finalWorth": 1805},
+        {"country": "India", "finalWorth": 100},
+        {"country": "India", "finalWorth": 200},
+        {"country": "India", "finalWorth": 300},
+        {"country": "India", "finalWorth": 400},
+        {"country": "India", "finalWorth": 500},
+        {"country": "India", "finalWorth": 600},
+        {"country": "India", "finalWorth": 628},
+        {"country": "France", "finalWorth": 100},
+        {"country": "France", "finalWorth": 200},
+        {"country": "France", "finalWorth": 300},
+        {"country": "France", "finalWorth": 400},
+        {"country": "France", "finalWorth": 499},
+        {"country": "Germany", "finalWorth": 100},
+        {"country": "Germany", "finalWorth": 200},
+        {"country": "Germany", "finalWorth": 300},
+        {"country": "Germany", "finalWorth": 400},
+        {"country": "Germany", "finalWorth": 462},
+        {"country": "Switzerland", "finalWorth": 100},
+        {"country": "Switzerland", "finalWorth": 200},
+        {"country": "Switzerland", "finalWorth": 300},
+        {"country": "Switzerland", "finalWorth": 409},
+        {"country": "United Kingdom", "finalWorth": 100},
+        {"country": "United Kingdom", "finalWorth": 200},
+        {"country": "United Kingdom", "finalWorth": 300},
+        {"country": "United Kingdom", "finalWorth": 370},
+        {"country": "Russia", "finalWorth": 100},
+        {"country": "Russia", "finalWorth": 200},
+        {"country": "Russia", "finalWorth": 351},
+        {"country": "Hong Kong", "finalWorth": 100},
+        {"country": "Hong Kong", "finalWorth": 200},
+        {"country": "Hong Kong", "finalWorth": 321},
+        {"country": "Canada", "finalWorth": 100},
+        {"country": "Canada", "finalWorth": 173}
+      ]
+    },
+    "transform": [
+      {
+        "calculate": "{'United States': '🇺🇸', 'China': '🇨🇳', 'India': '🇮🇳', 'France': '🇫🇷', 'Germany': '🇩🇪', 'Switzerland': '🇨🇭', 'United Kingdom':'🇬🇧', 'Russia': '🇷🇺', 'Hong Kong' : '🇭🇰', 'Canada': '🇨🇦'}[datum.country]",
+        "as": "emoji"
+      },
+      {"window": [{"op": "rank", "as": "rank"}], "groupby": ["country"]}
+    ],
+    "mark": {"type": "text", "baseline": "middle"},
+    "encoding": {
+      "x": {
+        "field": "finalWorth",
+        "type": "quantitative",
+        "title": "Total Wealth (in billions)",
+         "axis": {
+          "grid": false, 
+          "titleColor": "#b79941",     //title color
+          "titleFont": "Didot",         // title font
+          "titleFontSize": 18,          // title font size
+          "labelColor": "#a4a3a0",     // Color for the labels
+          "labelFont": "Didot",         // Font for the labels
+          "labelFontSize": 10,          // Font size for the labels
+          "labelAngle": 30              //rotation for the labels
+        }
+      },
+      "y": {
+        "field": "country",
+        "type": "nominal",
+        "title": "Country",
+        "axis": {
+          "grid": false, 
+          "domain": false,
+          "titleColor": "#b79941",    //title color
+          "titleFont": "Didot",         // title font
+          "titleFontSize": 18,          // title font size
+          "labelColor": "#a4a3a0",    // Color for the labels
+          "labelFont": "Didot",         // Font for the labels
+          "labelFontSize": 10,          // Font size for the labels
+          "labelAngle": 0               // rotation for the labels
+        }
+      },
+      "text": {"field": "emoji", "type": "nominal"},
+      "size": {"value": 17}
+    }
+  }
+  
