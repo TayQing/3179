@@ -1,12 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Age and Wealth of Billionaires by Gender",
-    "anchor": "start",
-    "color": "#ead66a",
-    "fontSize": 30,
-    "font": "Didot"
-  },
   "config": {
     "background": "#202020d6",
     "view": {"stroke": null},

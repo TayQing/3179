@@ -1,12 +1,5 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {
-      "text": "Top 10 countries with the highest number of billionaires",
-      "anchor": "start",   
-      "color": "#ead66a",  
-      "fontSize": 30,        
-      "font": "Didot"
-    },
     "config": {
       "view": {"stroke": null}, 
       "background": "#202020d6"
