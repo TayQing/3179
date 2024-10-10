@@ -1,0 +1,70 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A population pyramid for billionaires' age and gender.",
+    "data": {
+      "url": "https://raw.githubusercontent.com/TayQing/3179/refs/heads/main/Billionaires%20Statistics%20Dataset%202.csv",
+      "format": {"type": "csv"}
+    },
+    "transform": [
+      {"calculate": "datum.gender == 'F' ? 'Female' : 'Male'", "as": "gender"},
+      {"filter": "datum.age > 0"}  
+    ],
+    "spacing": 0,
+    "hconcat": [{
+      "transform": [{
+        "filter": {"field": "gender", "equal": "Female"}
+      }],
+      "title": "Female",
+      "mark": "bar",
+      "encoding": {
+        "y": {
+          "field": "age", "axis": null, "sort": "descending"
+        },
+        "x": {
+          "aggregate": "count", "field": "gender",
+          "title": "Number of Billionaires",
+          "axis": {"format": "s"},
+          "sort": "descending"
+        },
+        "color": {
+          "value": "#f59332"  
+        }
+      }
+    }, {
+      "width": 20,
+      "view": {"stroke": null},
+      "mark": {
+        "type": "text",
+        "align": "center"
+      },
+      "encoding": {
+        "y": {"field": "age", "type": "ordinal", "axis": null, "sort": "descending"},
+        "text": {"field": "age", "type": "quantitative"}
+      }
+    }, {
+      "transform": [{
+        "filter": {"field": "gender", "equal": "Male"}
+      }],
+      "title": "Male",
+      "mark": "bar",
+      "encoding": {
+        "y": {
+          "field": "age", "title": null,
+          "axis": null, "sort": "descending"
+        },
+        "x": {
+          "aggregate": "count", "field": "gender",
+          "title": "Number of Billionaires",
+          "axis": {"format": "s"}
+        },
+        "color": {
+          "value": "#675193"  
+        }
+      }
+    }],
+    "config": {
+      "view": {"stroke": null},
+      "axis": {"grid": false}
+    }
+  }
+  

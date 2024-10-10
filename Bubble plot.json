@@ -1,11 +1,34 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Age vs. Wealth of Billionaires by Gender",
-    "fontSize": 16,
-    "anchor": "start"
+    "text": "Age and Wealth of Billionaires by Gender",
+    "anchor": "start",
+    "color": "#ead66a",
+    "fontSize": 30,
+    "font": "Didot"
   },
-  "width": 700,
+  "config": {
+    "background": "#202020d6",
+    "view": {"stroke": null},
+    "axis": {
+      "labelFont": "Didot",
+      "labelColor": "#a4a3a0",
+      "labelFontSize": 12,
+      "titleFont": "Didot",
+      "titleColor": "#ead66a",
+      "titleFontSize": 15,
+      "grid": false
+    },
+    "legend": {
+      "titleFont": "Didot",
+      "titleColor": "#ead66a",
+      "titleFontSize": 15,
+      "labelFont": "Didot",
+      "labelColor": "#a4a3a0",
+      "labelFontSize": 12
+    }
+  },
+  "width": 800,
   "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/TayQing/3179/refs/heads/main/Billionaires%20Statistics%20Dataset%202.csv",
@@ -59,7 +82,7 @@
           "field": "gender",
           "type": "nominal",
           "title": "Gender",
-          "scale": {"domain": ["F", "M"], "range": ["#275154", "#e87f10"]}
+          "scale": {"domain": ["F", "M"], "range": ["#f59332", "#2e7686"]}
         },
         "opacity": {
           "condition": {"selection": "gender_highlight", "value": 1},
@@ -85,19 +108,18 @@
         "dx": 9,
         "dy": 0,
         "fontSize": 7,
-        "fontStyle": "italic"
+        "font": "Didot"
       },
       "encoding": {
         "text": {"field": "personName", "type": "nominal"},
         "x": {"field": "age", "type": "quantitative"},
         "y": {"field": "total_wealth", "type": "quantitative"},
-        "color": {"value": "gray"},
+        "color": {"value": "#a4a3a0"},
         "opacity": {
           "condition": {"test": "datum['total_wealth'] > 50000", "value": 1},
           "value": 0
         }
       }
     }
-  ],
-  "config": {"background": "#fffde5"}
+  ]
 }
