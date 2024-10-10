@@ -2,15 +2,6 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 800,
   "height": 400,
-  "title": {
-    "text": "Total Wealth of Billionaires by Country",
-    "fontSize": 16,
-    "anchor": "start",
-    "color": "#ead66a",
-    "fontSize": 30,
-    "font": "Didot"
-
-  },
   "config": {
     "background": "#202020d6",
     "legend": {

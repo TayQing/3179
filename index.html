@@ -4,79 +4,62 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Visualization Dashboard</title>
-  
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-
-  
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <h1>The World's Billionaires</h1>
-  
-  <div class="container">
-    <!-- Choropleth Map -->
-    <div class="graph-container">
+
+  <div class = "Line">
+    <div class="choropleth_map">
       <h2>Global Billionaire Wealth Distribution</h2>
       <p>This choropleth map shows the total wealth of billionaires by country, emphasizing where the world's richest individuals are concentrated.</p>
       <div id="choropleth_map"></div>
     </div>
 
-    <!-- Stacked Bar Chart -->
-    <div class="graph-container">
-      <h2>Billionaires by Industry</h2>
-      <p>This stacked bar chart breaks down the wealth of billionaires by industry, showing how different sectors contribute to the creation of extreme wealth.</p>
-      <div id="stacked_bar_chart"></div>
+    <div class="dotplot_emoji">
+      <h2>Billionaires by Country</h2>
+      <p>This dot plot uses emojis to represent the number of billionaires in each country, offering a unique and engaging visual representation.</p>
+      <div id="dotplot_emoji"></div>
     </div>
+  </div>
+  
 
-    <!-- Bubble Chart -->
-    <div class="graph-container">
-      <h2>Wealth of Billionaires by Age</h2>
-      <p>Explore how wealth is distributed across various age groups. Are younger billionaires accumulating more wealth compared to older ones?</p>
-      <div id="bubble_chart"></div>
-    </div>
+  <div class="stacked_bar_chart">
+    <h2>Billionaires by Industry</h2>
+    <p>This stacked bar chart breaks down the wealth of billionaires by industry, showing how different sectors contribute to the creation of extreme wealth.</p>
+    <div id="stacked_bar_chart"></div>
+  </div>
 
-    <!-- Dot Plot with Emoji -->
-    <div class="graph-container">
-      <h2>Top 10 Countries by Number of Billionaires</h2>
-      <p>This dot plot uses flags to show the top 10 countries with the highest number of billionaires, providing a visual representation of global wealth concentration.</p>
-      <div id="dot_plot"></div>
-    </div>
+  <div class="bubble_chart">
+    <h2>Top Billionaires Bubble Plot</h2>
+    <p>This bubble chart visualizes the top billionaires in the world, based on their total wealth.</p>
+    <div id="bubble_chart"></div>
+  </div>
 
-    <!-- Pie Chart -->
-    <div class="graph-container">
-      <h2>Gender Distribution of Billionaires</h2>
-      <p>The pie chart illustrates the gender distribution of billionaires, providing insight into the male-to-female ratio among the world’s wealthiest individuals.</p>
-      <div id="pie_chart"></div>
-    </div>
+  
 
-    <!-- Word Cloud -->
-    <div class="graph-container">
-      <h2>Top 20 Billionaires</h2>
-      <p>This word cloud visualizes the names of the top 20 billionaires, where larger names represent individuals with greater wealth.</p>
-      <div id="word_cloud"></div>
-    </div>
+  <div class="pie_chart">
+    <h2>Gender Distribution of Billionaires</h2>
+    <p>This pie chart illustrates the gender distribution of billionaires, providing insight into the male-to-female ratio among the world's wealthiest individuals.</p>
+    <div id="pie_chart"></div>
+  </div>
+
+  <div class="word_cloud">
+    <h2>Top 20 Billionaires</h2>
+    <p>This word cloud visualizes the names of the top 20 billionaires, where the size of the text indicates individuals with greater wealth.</p>
+    <div id="word_cloud"></div>
   </div>
 
   <script type="text/javascript">
-    // Embed Choropleth Map
     vegaEmbed('#choropleth_map', 'https://raw.githubusercontent.com/TayQing/3179/refs/heads/main/maps.json').catch(console.error);
-
-    // Embed Stacked Bar Chart
     vegaEmbed('#stacked_bar_chart', 'https://raw.githubusercontent.com/TayQing/3179/refs/heads/main/stacked%20chart.json').catch(console.error);
-
-    // Embed Bubble Chart
     vegaEmbed('#bubble_chart', 'https://raw.githubusercontent.com/TayQing/3179/refs/heads/main/Bubble%20plot.json').catch(console.error);
-
-    // Embed Dot Plot with Emoji
-    vegaEmbed('#dot_plot', 'https://raw.githubusercontent.com/TayQing/3179/refs/heads/main/dotplot.json').catch(console.error);
-
-    // Embed Pie Chart
+    vegaEmbed('#dotplot_emoji', 'https://raw.githubusercontent.com/TayQing/3179/refs/heads/main/dot%20plot%20emoji%20chart.json').catch(console.error);
     vegaEmbed('#pie_chart', 'https://raw.githubusercontent.com/TayQing/3179/refs/heads/main/piechart.json').catch(console.error);
-
-    // Embed Word Cloud
     vegaEmbed('#word_cloud', 'https://raw.githubusercontent.com/TayQing/3179/refs/heads/main/wordcloud.json').catch(console.error);
   </script>
 

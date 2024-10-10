@@ -1,38 +1,21 @@
 body {
-  background-color: #202020;
-  color: #ffffff;
   font-family: 'Didot', serif;
-  margin: 0;
-  padding: 0;
+  background-color: #202020;
+  color: #ead66a;
 }
 
 h1 {
+  font-size: 3em;
   text-align: center;
-  color: #ead66a;
-  font-size: 40px;
+}
+
+.choropleth_map, .stacked_bar_chart, .bubble_chart, .dotplot_emoji, .pie_chart, .word_cloud {
   margin: 20px;
-}
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 20px;
-}
-
-.graph-container {
-  margin: 20px;
-  width: 45%;
-}
-
-h2 {
-  color: #f59332;
-  font-size: 24px;
-  font-family: 'Didot', serif;
+  padding: 10px;
+  background-color: #202020;
 }
 
 p {
-  color: #a4a3a0;
-  font-size: 14px;
-  margin: 10px 0;
+  color: #ffffff;
+  font-size: 1.2em;
 }
