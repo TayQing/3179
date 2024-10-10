@@ -49,7 +49,7 @@
         "y": {
           "field": "total_wealth",
           "type": "quantitative",
-          "title": "Total Wealth (in billions)",
+          "title": "Total Wealth (in millions)",
           "axis": {
             "grid": false,
             "titleColor": "#b79941",
