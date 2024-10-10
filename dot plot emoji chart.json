@@ -2,14 +2,14 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
      "title": {
       "text": "Top 10 Countries by Total Billionaire Wealth",
-      "anchor": "start",     // Align title to the left
-      "color": "#ead66a",  // Change title color to gold
-      "fontSize": 30,        // Change title font size
+      "anchor": "start",    
+      "color": "#ead66a", 
+      "fontSize": 30,        
       "font": "Didot"
     },
     "config": {
-      "view": {"stroke": null},         // Remove the border stroke
-      "background": "#202020d6",},  //background colour
+      "view": {"stroke": null},        
+      "background": "#202020d6"},  
     "width": 900,
     "height": 400,
     "data": {
@@ -128,13 +128,13 @@
         "title": "Total Wealth (in billions)",
          "axis": {
           "grid": false, 
-          "titleColor": "#b79941",     //title color
-          "titleFont": "Didot",         // title font
-          "titleFontSize": 18,          // title font size
-          "labelColor": "#a4a3a0",     // Color for the labels
-          "labelFont": "Didot",         // Font for the labels
-          "labelFontSize": 10,          // Font size for the labels
-          "labelAngle": 30              //rotation for the labels
+          "titleColor": "#b79941",     
+          "titleFont": "Didot",      
+          "titleFontSize": 18,         
+          "labelColor": "#a4a3a0",     
+          "labelFont": "Didot",   
+          "labelFontSize": 10,         
+          "labelAngle": 30              
         }
       },
       "y": {
@@ -144,13 +144,13 @@
         "axis": {
           "grid": false, 
           "domain": false,
-          "titleColor": "#b79941",    //title color
-          "titleFont": "Didot",         // title font
-          "titleFontSize": 18,          // title font size
-          "labelColor": "#a4a3a0",    // Color for the labels
-          "labelFont": "Didot",         // Font for the labels
-          "labelFontSize": 10,          // Font size for the labels
-          "labelAngle": 0               // rotation for the labels
+          "titleColor": "#b79941",    
+          "titleFont": "Didot",        
+          "titleFontSize": 18,         
+          "labelColor": "#a4a3a0",    
+          "labelFont": "Didot",        
+          "labelFontSize": 10,         
+          "labelAngle": 0              
         }
       },
       "text": {"field": "emoji", "type": "nominal"},

@@ -15,12 +15,12 @@
     "background": "#202020d6",
     "legend": {
       "orient": "right",
-      "titleFont": "Didot",         // Set legend title font
-      "titleColor": "#b79941",    // Set legend title color
-      "titleFontSize": 15,        // Set legend title font size
-      "labelFont": "Didot",       // Set legend label font
-      "labelColor": "#a4a3a0",     // Set legend label color
-      "labelFontSize": 9          // Set legend label font size
+      "titleFont": "Didot",        
+      "titleColor": "#b79941",    
+      "titleFontSize": 15,        
+      "labelFont": "Didot",      
+      "labelColor": "#a4a3a0",     
+      "labelFontSize": 9          
       }
     },
   "width": 800,
