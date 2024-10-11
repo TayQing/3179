@@ -4,6 +4,11 @@ body {
   color: #ead66a;
 }
 
+h1 {
+  text-align: center; /* Center the entire heading */
+  margin-bottom: 0;   /* Reduce the space between the two lines */
+}
+
 h1 span:first-child {
   font-size: 1.5em; /* The World's */
   display: block;
