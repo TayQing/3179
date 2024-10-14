@@ -28,7 +28,7 @@ h1 span:last-child {
 }
 
 
-.stacked_bar_chart, .bubble_chart, .dotplot_emoji, .pie_chart, .word_cloud {
+.stacked_bar_chart, .population_pyramid, .dotplot_emoji, .pie_chart, .word_cloud {
   margin: 20px;
   padding: 10px;
   background-color: #202020;
