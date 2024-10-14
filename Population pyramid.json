@@ -3,13 +3,6 @@
   "width": 800, 
   "height": 400, 
   "config": {"background": "#202020d6","view": {"stroke": null},"axis": {"grid": false}},
-  "title": {
-    "text": "Number of Billionaire in Gender and Age",
-    "anchor": "start",
-    "color": "#ead66a",
-    "fontSize": 30,
-    "font": "Didot"
-  },
   "data": { 
     "url": "https://raw.githubusercontent.com/TayQing/3179/refs/heads/main/Billionaires%20Statistics%20Dataset%202.csv",
     "format": {"type": "csv"}
