@@ -1,0 +1,77 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "height": 400,
+  "config": {
+    "background": "#202020d6"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/TayQing/3179/refs/heads/main/Billionaires%20Statistics%20Dataset%202.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {
+      "aggregate": [{"op": "sum", "field": "finalWorth", "as": "total_wealth"}],
+      "groupby": ["category"]
+    }
+  ],
+  "layer": [{
+    "mark": {
+      "type": "arc", 
+      "innerRadius":20
+    },
+    "encoding": {
+      "theta": {
+        "field": "total_wealth", 
+        "type": "quantitative", 
+        "stack": true
+      },
+      "color": {
+        "field": "category", 
+        "type": "nominal",
+        "scale": {
+          "domain": [
+            "Automotive", "Technology", "Fashion & Retail", "Finance & Investments",
+            "Media & Entertainment", "Telecom", "Diversified", "Food & Beverage",
+            "Logistics", "Gambling & Casinos", "Manufacturing", "Real Estate",
+            "Metals & Mining", "Energy", "Healthcare", "Service", "Construction & Engineering", "Sports"
+          ],
+          "range": [
+            "#4e79a7", "#a0cbe8", "#f28e2B", "#ffbe7d", "#59a14f", "#8cd17d","#b6992d", "#f1ce63", "#499894", "#86bcb6", "#e15759", "#ff9d9a",
+            "#79706e", "#bab0ac", "#d37295", "#fabfd2", "#9d7660", "#F0DC82"
+          ]
+        },
+        "legend": {
+          "title": "Category", 
+          "titleFont": "Didot", 
+          "labelFont": "Didot",
+          "labelColor":"#cfcfcf",
+          "titleColor":"#ead66a"
+        }
+      },
+      "tooltip": [
+        {"field": "category", "title": "Category"},
+        {
+          "field": "total_wealth", 
+          "type": "quantitative", 
+          "title": "Total Wealth",
+          "format": "$,.2f"
+        }
+      ]
+    }
+  }],
+  "encoding": {
+    "theta": {
+      "field": "total_wealth", 
+      "type": "quantitative", 
+      "stack": "true"
+    },
+    "radius": {
+      "field": "total_wealth", 
+      "scale": {
+        "type": "sqrt", 
+        "zero": true, 
+        "rangeMin": 70
+      }
+    }
+  }
+}
