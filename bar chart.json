@@ -1,0 +1,64 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 400,
+    "config": {
+      "view": {"stroke": null}, 
+      "background": "#202020d6",
+      "axis": {
+        "labelFont": "Didot",
+        "titleFont": "Didot",
+        "labelFontSize": 10,
+        "titleFontSize": 18,
+        "labelColor": "#cfcfcf",
+        "titleColor": "#ead66a",
+        "grid": false 
+      }
+    },
+    "data": {
+      "url": "https://raw.githubusercontent.com/TayQing/3179/refs/heads/main/Billionaires%20Statistics%20Dataset%202.csv",
+      "format": {"type": "csv"}
+    },
+    "transform": [
+      {"filter": "datum.rank <= 20"}  
+    ],
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "personName", 
+        "type": "nominal", 
+        "axis": {
+          "labelAngle": 30, 
+          "title": "Top 20 Billionaire"
+        },
+        "sort": "y" 
+      },
+      "y": {
+        "field": "finalWorth", 
+        "type": "quantitative", 
+        "axis": {
+          "title": "Wealth (in $M)"
+        }
+      },
+      "color": {
+        "condition": [
+          {"test": "datum.rank == 1", 
+            "value": "#ffa971" 
+          },
+          {
+           "test": "datum.rank == 20", 
+            "value": "#ffa971"  
+              }
+            ],
+            "value": "#dedede"  
+      },
+      "tooltip": [  
+        {"field": "personName", "type": "nominal", "title": "Billionaire"},
+        {"field": "finalWorth", "type": "quantitative", "title": "Wealth ($M)"},
+        {"field": "source", "type": "nominal", "title": "Source"},
+        {"field": "rank", "type": "quantitative", "title": "Rank"}
+        
+      ]
+    }
+  }
+  
