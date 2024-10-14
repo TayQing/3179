@@ -36,7 +36,7 @@
             "Metals & Mining", "Energy", "Healthcare", "Service", "Construction & Engineering", "Sports"
           ],
           "range": [
-            "#4e79a7", "#a0cbe8", "#f28e2B", "#ffbe7d", "#59a14f", "#8cd17d","#b6992d", "#f1ce63", "#499894", "#86bcb6", "#e15759", "#ff9d9a",
+            "#4e79a7", "#a0cbe8", "#fff54b", "#ffbe7d", "#59a14f", "#8cd17d","#b6992d", "#f1ce63", "#499894", "#86bcb6", "#e15759", "#ff9d9a",
             "#79706e", "#bab0ac", "#d37295", "#fabfd2", "#9d7660", "#F0DC82"
           ]
         },

@@ -27,8 +27,7 @@ h1 span:last-child {
   text-align: center;
 }
 
-
-.stacked_bar_chart, .population_pyramid, .dotplot_emoji, .radar_chart, .word_cloud {
+.population_pyramid, .dotplot_emoji, .radar_chart, .word_cloud {
   margin: 20px;
   padding: 10px;
   background-color: #202020;
