@@ -13,19 +13,19 @@
 
   <h1>
     <span>The World's</span>
-    <span>Billionaire$</span>
+    <span>💰 Billionaire$ 💰</span>
   </h1>
 
   <div class="container">
       <div class="choropleth_map">
-        <h2>Global Billionaire Wealth Distribution in 2023</h2>
+        <h2>🌎 Global Billionaire Wealth Distribution in 2023</h2>
         <p>This choropleth map shows the total wealth of billionaires by country, emphasizing where the world's richest individuals are concentrated. 
           The map highlights countries such as the United States, China, and India, which lead in billionaire wealth.</p>
         <div id="choropleth_map"></div>
       </div>
 
       <div class="dotplot_emoji">
-        <h2>Top 10 Countries Dominating Global Billionaire Count</h2>
+        <h2>🔝 Top 10 Countries Dominating Global Billionaire Count</h2>
         <p>This visualization highlights the immense wealth concentration across countries, with a stark contrast in billionaire numbers.
           It tells the story of economic powerhouses like the United States and China leading the global billionaire count, far outpacing other nations. 
           The U.S., with its tech giants and industrial magnates, continues to hold the top spot, while emerging markets like China are rapidly catching up. 
@@ -60,7 +60,7 @@
       </div>
 
       <div class="word_cloud">
-        <h2>Top 20 Billionaires</h2>
+        <h2>👥 Top 20 Billionaires</h2>
         <p>Bernard Arnaud, Elon Musk and Jeff Bezos, demonstrating their significant economic influence. 
           It provides a snapshot of leading figures from a variety of industries, including technology, retail and finance.</p>
         <div id="word_cloud"></div>
@@ -70,12 +70,22 @@
     </div>
 
     <div class="population_pyramid">
-      <h2>Total Billionaires by Gender and Age</h2>
+      <h2>👫🏻 Total Billionaires by Gender and Age</h2>
       <p>This population pyramid highlights the distribution of billionaires by gender and age. 
         The age group of 56-60 contains the highest number of billionaires, showing that wealth accumulation often peaks in mid-life.</p>
       <div id="population_pyramid"></div>
       </div>
   </div>
+
+  <footer>
+    <div class="metadata">
+      <p>Author: Tay Qing</p>
+      <p>Data Sources: <a href="https://www.kaggle.com/datasets/nelgiriyewithana/billionaires-statistics-dataset">Kaggle Datasets</a>, <a href="https://raw.githubusercontent.com/TayQing/3179/refs/heads/main/aggregated_billionaires_data.csv">Aggregated Datasets</a> </p>
+      <p>Date: October 2024</p>
+    </div>
+  </footer>
+
+
 
   <script type="text/javascript">
     vegaEmbed('#choropleth_map', 'https://raw.githubusercontent.com/TayQing/3179/refs/heads/main/maps.json').catch(console.error);

@@ -66,3 +66,21 @@ p {
   border: 2px solid #ead66a; /* Added a solid border for better visibility */
 }
 
+footer {
+  background-color: #1e1e1e;
+  color: #cfcfcf;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  border-top: 2px solid #ead66a;
+}
+
+footer a {
+  color: #ead66a;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
