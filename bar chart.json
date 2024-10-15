@@ -57,8 +57,8 @@
         "color": {
           "condition": [
             {"test": "datum.rank == 1","value": "#fff54b" },
-            { "test": "datum.rank == 2", "value": "#4e79a7"},
-            {"test": "datum.rank == 3", "value": "#a0cbe8"},
+            { "test": "datum.rank == 2", "value": "#cfcfcf"},
+            {"test": "datum.rank == 3", "value": "#cfcfcf"},
             {"test": "datum.rank == 4","value": "#cfcfcf" },
             {"test": "datum.rank == 5","value": "#cfcfcf" },
             { "test": "datum.rank == 6","value": "#cfcfcf" },
@@ -110,9 +110,7 @@
         "y": {"field": "finalWorth", "type": "quantitative"},
         "text": {
           "condition": [
-            {"test": "datum.rank == 1", "value": "LVMH"},
-            {"test": "datum.rank == 2", "value": "Tesla"},
-            {"test": "datum.rank == 3", "value": "Amazon"}
+            {"test": "datum.rank == 1", "value": "LVMH"}
           ],
           "value": null
         }
