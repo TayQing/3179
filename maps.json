@@ -1,11 +1,24 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 800,
-  "height": 400,
+  "width": 500,
+  "height": 300,
   "config": {
     "background": "#202020d6"
   },
   "projection": {"type": "equalEarth"},
+  "params": [
+    {
+      "name": "Wealth_Above",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 2500000,
+        "step": 50000,
+        "name": "Minimum Wealth (in $M): "
+      }
+    }
+  ],
   "layer": [
     {
       "data": {
@@ -40,7 +53,8 @@
         {
           "calculate": "isValid(datum.total_wealth) ? datum.total_wealth : 0", 
           "as": "total_wealth"  
-        }
+        },
+        {"filter": "datum.total_wealth >= Wealth_Above"}
       ],
       "mark": {"type": "geoshape", "stroke": "white"},
       "encoding": {
@@ -57,8 +71,8 @@
             "orient": "right",
             "titleFont": "Didot",
             "labelFont": "Didot",
-            "titleFontSize": 12,    
-            "labelFontSize": 10,     
+            "titleFontSize": 12,     // Increased size
+            "labelFontSize": 10,     // Increased size
             "titleColor":"#ead66a",
             "labelColor":"#cfcfcf"
           }
