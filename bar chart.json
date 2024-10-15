@@ -22,43 +22,74 @@
     "transform": [
       {"filter": "datum.rank <= 20"}  
     ],
-    "mark": "bar",
-    "encoding": {
-      "x": {
-        "field": "personName", 
-        "type": "nominal", 
-        "axis": {
-          "labelAngle": 30, 
-          "title": "Top 20 Billionaire"
-        },
-        "sort": "y" 
-      },
-      "y": {
-        "field": "finalWorth", 
-        "type": "quantitative", 
-        "axis": {
-          "title": "Wealth (in $M)"
-        }
-      },
-      "color": {
-        "condition": [
-          {"test": "datum.rank == 1", 
-            "value": "#ffa971" 
+    "layer": [
+      {
+        "mark": "bar",
+        "encoding": {
+          "x": {
+            "field": "personName", 
+            "type": "nominal", 
+            "axis": {
+              "labelAngle": 30, 
+              "title": "Top 20 Billionaire"
+            },
+            "sort": "y" 
           },
-          {
-           "test": "datum.rank == 20", 
-            "value": "#ffa971"  
+          "y": {
+            "field": "finalWorth", 
+            "type": "quantitative", 
+            "axis": {
+              "title": "Wealth (in $M)"
+            }
+          },
+          "color": {
+            "condition": [
+              {
+                "test": "datum.rank == 1", 
+                "value": "#ffa971" 
+              },
+              {
+                "test": "datum.rank == 20", 
+                "value": "#ffa971"
               }
             ],
-            "value": "#dedede"  
+            "value": "#dedede"
+          },
+          "tooltip": [  
+            {"field": "personName", "type": "nominal", "title": "Billionaire"},
+            {"field": "finalWorth", "type": "quantitative", "title": "Wealth ($M)"},
+            {"field": "source", "type": "nominal", "title": "Source"},
+            {"field": "rank", "type": "quantitative", "title": "Rank"}
+          ]
+        }
       },
-      "tooltip": [  
-        {"field": "personName", "type": "nominal", "title": "Billionaire"},
-        {"field": "finalWorth", "type": "quantitative", "title": "Wealth ($M)"},
-        {"field": "source", "type": "nominal", "title": "Source"},
-        {"field": "rank", "type": "quantitative", "title": "Rank"}
-        
-      ]
-    }
+      {
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "dx": -20,
+          "dy": -10,
+          "font": "Didot",
+          "fontSize": 15,
+          "color": "#ead66a"
+        },
+        "encoding": {
+          "x": {
+            "field": "personName",
+            "type": "nominal",
+            "axis": null,
+            "sort": "y"
+          },
+          "y": {"field": "finalWorth", "type": "quantitative"},
+          "text": {
+            "condition": [
+              {"test": "datum.rank == 1", "value": "LVMH"},
+              {"test": "datum.rank == 20", "value": "Walmart"}
+            ],
+            "value": null
+          }
+        }
+      }
+    ]
   }
   
