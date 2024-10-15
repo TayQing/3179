@@ -42,7 +42,7 @@
           "field": "personName", 
           "type": "nominal", 
           "axis": {
-            "labelAngle": 40, 
+            "labelAngle": 45, 
             "title": "Billionaires's name"  
           },
           "sort": "y" 
@@ -102,7 +102,7 @@
           "field": "personName",
           "type": "nominal",
           "axis": {
-            "labelAngle": 40,
+            "labelAngle": 45,
             "title": ""  
           },
           "sort": "y"
