@@ -31,7 +31,7 @@
             "type": "nominal", 
             "axis": {
               "labelAngle": 30, 
-              "title": "Top 20 Billionaire"
+              "title": "Billionaires's name"  
             },
             "sort": "y" 
           },
@@ -44,14 +44,25 @@
           },
           "color": {
             "condition": [
-              {
-                "test": "datum.rank == 1", 
-                "value": "#ffa971" 
-              },
-              {
-                "test": "datum.rank == 20", 
-                "value": "#ffa971"
-              }
+              {"test": "datum.rank == 1","value": "#fff54b" },
+              { "test": "datum.rank == 2", "value": "#4e79a7"},
+              {"test": "datum.rank == 3", "value": "#a0cbe8"},
+              {"test": "datum.rank == 4","value": "#a0cbe8" },
+              {"test": "datum.rank == 5","value": "#ffbe7d" },
+              { "test": "datum.rank == 6","value": "#a0cbe8" },
+              {"test": "datum.rank == 7","value": "#59a14f" },
+              {"test": "datum.rank == 8","value": "#8cd17d" },
+              {"test": "datum.rank == 9","value": "#b6992d"},
+              { "test": "datum.rank == 10","value": "#a0cbe8" },
+              {"test": "datum.rank == 11","value": "#fff54b"},
+              {"test": "datum.rank == 12","value": "#a0cbe8" },
+              {"test": "datum.rank == 13","value": "#fff54b"},
+              {"test": "datum.rank == 14", "value": "#a0cbe8"},
+              {"test": "datum.rank == 15", "value": "#f1ce63"},
+              {"test": "datum.rank == 16", "value": "#a0cbe8" },
+              {"test": "datum.rank == 17","value": "#b6992d"},
+              {"test": "datum.rank == 19","value": "#fff54b"},
+              { "test": "datum.rank == 20","value": "#fff54b"}
             ],
             "value": "#dedede"
           },
@@ -59,7 +70,8 @@
             {"field": "personName", "type": "nominal", "title": "Billionaire"},
             {"field": "finalWorth", "type": "quantitative", "title": "Wealth ($M)"},
             {"field": "source", "type": "nominal", "title": "Source"},
-            {"field": "rank", "type": "quantitative", "title": "Rank"}
+            {"field": "rank", "type": "quantitative", "title": "Rank"},
+            {"field": "category", "type": "nominal", "title": "Category"}
           ]
         }
       },
@@ -77,7 +89,10 @@
           "x": {
             "field": "personName",
             "type": "nominal",
-            "axis": null,
+            "axis": {
+              "labelAngle": 30,
+              "title": ""  
+            },
             "sort": "y"
           },
           "y": {"field": "finalWorth", "type": "quantitative"},
