@@ -4,8 +4,8 @@
       "view": {"stroke": null}, 
       "background": "#202020d6"
     },
-    "width": 600,
-    "height": 300,
+    "width": 800,
+    "height": 400,
     "data": {
       "values": [
         {"country": "United States", "num_billionaires": 754},
