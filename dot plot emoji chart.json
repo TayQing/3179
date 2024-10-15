@@ -1,14 +1,14 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "config": {
-      "view": {"stroke": null}, 
-      "background": "#202020d6"
-    },
-    "width": 800,
-    "height": 400,
-    "data": {
-      "values": [
-        {"country": "United States", "num_billionaires": 754},
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "view": {"stroke": null}, 
+    "background": "#202020d6"
+  },
+  "width": 800,
+  "height": 400,
+  "data": {
+    "values": [
+      {"country": "United States", "num_billionaires": 754},
         {"country": "United States", "num_billionaires": 20},
         {"country": "United States", "num_billionaires": 70},
         {"country": "United States", "num_billionaires": 120},
@@ -66,49 +66,105 @@
   
         {"country": "Italy", "num_billionaires": 20},
         {"country": "Italy", "num_billionaires": 55}
-      ]
-    },
-    "transform": [
-      {
-        "calculate": "{'United States': '🇺🇸', 'China': '🇨🇳', 'India': '🇮🇳', 'Germany': '🇩🇪', 'Russia': '🇷🇺', 'Hong Kong': '🇭🇰', 'United Kingdom': '🇬🇧', 'Switzerland': '🇨🇭','Singapore':'🇸🇬','Italy':'🇮🇹'}[datum.country]",
-        "as": "emoji"
-      }
-    ],
-    "mark": {"type": "text", "baseline": "middle"},
-    "encoding": {
-      "x": {
-        "field": "num_billionaires",
-        "type": "quantitative",
-        "title": "Number of Billionaires",
-        "axis": {
-          "grid": false, 
-          "titleColor": "#ead66a",
-          "titleFont": "Didot",
-          "titleFontSize": 20,
-          "labelColor": "#cfcfcf",
-          "labelFont": "Didot",
-          "labelFontSize": 12,
-          "labelAngle": 30
-        }
-      },
-      "y": {
-        "field": "country",
-        "type": "nominal",
-        "title": "Country",
-        "axis": {
-          "grid": false,
-          "domain": false,
-          "titleColor": "#ead66a",
-          "titleFont": "Didot",
-          "titleFontSize": 20,
-          "labelColor": "#cfcfcf",
-          "labelFont": "Didot",
-          "labelFontSize": 12,
-          "labelAngle": 0
-        }
-      },
-      "text": {"field": "emoji", "type": "nominal"},
-      "size": {"value": 50}
+      
+    ]
+  },
+  "transform": [
+    {
+      "calculate": "{'United States': '🇺🇸', 'China': '🇨🇳', 'India': '🇮🇳', 'Germany': '🇩🇪', 'Russia': '🇷🇺', 'Hong Kong': '🇭🇰', 'United Kingdom': '🇬🇧', 'Switzerland': '🇨🇭','Singapore':'🇸🇬','Italy':'🇮🇹'}[datum.country]",
+      "as": "emoji"
     }
-  }
-  
+  ],
+  "layer": [
+    {
+      "mark": {"type": "text", "baseline": "middle"},
+      "encoding": {
+        "x": {
+          "field": "num_billionaires",
+          "type": "quantitative",
+          "title": "Number of Billionaires",
+          "axis": {
+            "grid": false, 
+            "titleColor": "#ead66a",
+            "titleFont": "Didot",
+            "titleFontSize": 20,
+            "labelColor": "#cfcfcf",
+            "labelFont": "Didot",
+            "labelFontSize": 12,
+            "labelAngle": 30
+          }
+        },
+        "y": {
+          "field": "country",
+          "type": "nominal",
+          "title": "Country",
+          "axis": {
+            "grid": false,
+            "domain": false,
+            "titleColor": "#ead66a",
+            "titleFont": "Didot",
+            "titleFontSize": 20,
+            "labelColor": "#cfcfcf",
+            "labelFont": "Didot",
+            "labelFontSize": 12,
+            "labelAngle": 0
+          }
+        },
+        "text": {"field": "emoji", "type": "nominal"},
+        "size": {"value": 50},
+        "tooltip": [
+          {"field": "country", "title": "Country"},
+          {"field": "num_billionaires", "title": "Number of Billionaires"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": -50,
+        "dy": -30,
+        "font": "Didot",
+        "fontSize": 15,
+        "color": "#ead66a"
+      },
+      "encoding": {
+        "x": {
+          "datum": 754,  
+          "type": "quantitative"
+        },
+        "y": {
+          "datum": "United States",
+          "type": "nominal"
+        },
+        "text": {
+          "value": "Total 754 Billionaires"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": -50,
+        "dy": -30,
+        "font": "Didot",
+        "fontSize": 15,
+        "color": "#ead66a"
+      },
+      "encoding": {
+        "x": {
+          "datum": 523,  
+          "type": "quantitative"
+        },
+        "y": {
+          "datum": "China",
+          "type": "nominal"
+        },
+        "text": {
+          "value": "Total 523 Billionaires"
+        }
+      }
+    }
+  ]
+}
