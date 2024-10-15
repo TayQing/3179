@@ -54,15 +54,15 @@ p {
   color: #cfcfcf;
 }
 
-#word_cloud, #pie_chart , .bar_chart, .radar_chart{
+#word_cloud, #pie_chart {
   height: 400px;
 }
 
-#choropleth_map, #dotplot_emoji, #population_pyramid {
+#choropleth_map, #dotplot_emoji, #population_pyramid, #bar_chart, #radar_chart {
   height: 400px;
 }
 
-.population_pyramid, .dotplot_emoji, .radar_chart, .word_cloud, .choropleth_map, .bar_chart, .pie_chart, .bar_chart, .radar_chart{
+.population_pyramid, .dotplot_emoji, .radar_chart, .word_cloud, .choropleth_map, .bar_chart, .pie_chart, .radar_chart{
   margin: 20px auto;
   padding: 20px;  /* Increased padding for bigger spacing inside the box */
   background-color: #1e1e1e;
@@ -71,4 +71,4 @@ p {
   max-width: 1200px;  /* Increase max-width to make the box larger */
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7); /* Increased shadow for more depth */
   border: 2px solid #ead66a; /* Added a solid border for better visibility */
-}
+} 
