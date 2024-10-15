@@ -23,7 +23,7 @@
       "text": "Female",
       "color": "#ead66a",
       "font": "Didot",
-      "fontSize": 18},
+      "fontSize": 20},
       "mark": "bar",
       "encoding": {
         "y": {
@@ -39,10 +39,10 @@
             "grid": false,
             "titleColor": "#ead66a",
             "titleFont": "Didot",
-            "titleFontSize": 18,
+            "titleFontSize": 20,
             "labelColor": "#cfcfcf",
             "labelFont": "Didot",
-            "labelFontSize": 10,
+            "labelFontSize": 12,
             "labelAngle": 360
           },
           "scale": {"domain": [350,0]}
@@ -67,7 +67,7 @@
       "font": "Didot",       
       "fontSize":10,           
       "color": "#cfcfcf",
-      "fontWeight": "ligh"        
+      "fontWeight": "light"        
   },
   "encoding": {
     "y": {"field": "age_range", "type": "ordinal", "axis": null, "sort": "descending"},

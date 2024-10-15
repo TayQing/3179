@@ -45,8 +45,8 @@
           "title": "Category", 
           "titleFont": "Didot", 
           "labelFont": "Didot",
-          "labelFontSize": 10,
-          "titleFontSize":12,
+          "labelFontSize": 12,
+          "titleFontSize": 20,
           "labelColor":"#cfcfcf",
           "titleColor":"#ead66a"
         }
