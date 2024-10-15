@@ -21,6 +21,15 @@ h1 span:last-child {
   display: block;
 }
 
+.intro-paragraph {
+  font-size: 25px;
+  color: #cfcfcf;
+  text-align: center;
+  max-width: 80%;
+  margin: 20px auto; /* Center the paragraph and add margin */
+  line-height: 1.5; /* Improved readability */
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -35,12 +44,12 @@ h1 span:last-child {
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 45px;
   color: #ead66a;
 }
 
 p {
-  font-size: 18px;
+  font-size: 25px;
   color: #cfcfcf;
 }
 
@@ -49,8 +58,6 @@ p {
   color: #cfcfcf;
   margin-top: 10px;
 }
-
-
 
 .population_pyramid, .dotplot_emoji, .radar_chart, .word_cloud, .choropleth_map, .bar_chart, .pie_chart {
   margin: 20px auto;
