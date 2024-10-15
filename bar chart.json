@@ -8,8 +8,8 @@
     "axis": {
       "labelFont": "Didot",
       "titleFont": "Didot",
-      "labelFontSize": 10,
-      "titleFontSize": 18,
+      "labelFontSize": 12,
+      "titleFontSize": 20,
       "labelColor": "#cfcfcf",
       "titleColor": "#ead66a",
       "grid": false 
@@ -42,7 +42,7 @@
           "field": "personName", 
           "type": "nominal", 
           "axis": {
-            "labelAngle": 45, 
+            "labelAngle": 50, 
             "title": "Billionaires's name"  
           },
           "sort": "y" 
