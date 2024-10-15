@@ -98,12 +98,12 @@
         "axis": {
           "grid": false,
           "domain": false,
-          "titleColor": "#b79941",
+          "titleColor": "#ead66a",
           "titleFont": "Didot",
-          "titleFontSize": 18,
-          "labelColor": "#a4a3a0",
+          "titleFontSize": 20,
+          "labelColor": "#cfcfcf",
           "labelFont": "Didot",
-          "labelFontSize": 10,
+          "labelFontSize": 12,
           "labelAngle": 0
         }
       },
