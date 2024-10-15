@@ -28,21 +28,11 @@ h1 span:last-child {
   padding: 20px;
 }
 
-.chart-section1 {
+.chart-section1, .chart-section2 {
   display: flex;
   justify-content: space-between;
   gap: 30px;
 }
-
-
-
-.chart-section2 {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-}
-
-
 
 h2 {
   font-size: 24px;
@@ -54,6 +44,12 @@ p {
   color: #cfcfcf;
 }
 
+.metadata {
+  font-size: 12px;
+  color: #cfcfcf;
+  margin-top: 10px;
+}
+
 #word_cloud, #pie_chart {
   height: 400px;
 }
@@ -62,13 +58,13 @@ p {
   height: 400px;
 }
 
-.population_pyramid, .dotplot_emoji, .radar_chart, .word_cloud, .choropleth_map, .bar_chart, .pie_chart, .radar_chart{
+.population_pyramid, .dotplot_emoji, .radar_chart, .word_cloud, .choropleth_map, .bar_chart, .pie_chart {
   margin: 20px auto;
   padding: 20px;  /* Increased padding for bigger spacing inside the box */
-  background-color: #1e1e1e;
+  background-color: #202020d6;
   border-radius: 12px;  /* Slightly rounded corners */
   width: 95%;  /* Adjust the width for more space */
   max-width: 1200px;  /* Increase max-width to make the box larger */
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7); /* Increased shadow for more depth */
   border: 2px solid #ead66a; /* Added a solid border for better visibility */
-} 
+}
