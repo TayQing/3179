@@ -57,8 +57,8 @@
             "orient": "right",
             "titleFont": "Didot",
             "labelFont": "Didot",
-            "titleFontSize": 12,     // Increased size
-            "labelFontSize": 10,     // Increased size
+            "titleFontSize": 12,    
+            "labelFontSize": 10,     
             "titleColor":"#ead66a",
             "labelColor":"#cfcfcf"
           }
