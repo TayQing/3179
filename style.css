@@ -28,15 +28,15 @@ h1 span:last-child {
   padding: 20px;
 }
 
-.chart-section1 {
+
+
+.chart-section2 {
   display: flex;
   justify-content: space-between;
   gap: 30px;
 }
 
-.chart-section1 div {
-  width: 48%;
-}
+
 
 h2 {
   font-size: 24px;
