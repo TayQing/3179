@@ -58,7 +58,7 @@ p {
   height: 400px;
 }
 
-.population_pyramid,.dotplot_emoji, .radar_chart, .word_cloud, .choropleth_map, .bar_chart, .pie_chart {
+.population_pyramid, .dotplot_emoji, .radar_chart, .word_cloud, .choropleth_map, .bar_chart, .pie_chart {
   margin: 20px auto;
   padding: 20px;  /* Increased padding for bigger spacing inside the box */
   background-color: #202020d6;
