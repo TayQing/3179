@@ -8,8 +8,8 @@
     "axis": {
       "labelFont": "Didot",
       "titleFont": "Didot",
-      "labelFontSize": 12,
-      "titleFontSize": 20,
+      "labelFontSize": 8,
+      "titleFontSize": 15,
       "labelColor": "#cfcfcf",
       "titleColor": "#ead66a",
       "grid": false 
