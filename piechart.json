@@ -1,61 +1,60 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 200,
-    "height": 300,
-    "config": {
-      "background": "#202020d6"
-    },
-    "data": {
-      "url": "https://raw.githubusercontent.com/TayQing/3179/refs/heads/main/Billionaires%20Statistics%20Dataset%202.csv",
-      "format": {"type": "csv"}
-    },
-    "transform": [
-      {
-        "aggregate": [{"op": "count", "as": "count"}],
-        "groupby": ["selfMade"]
-      }
-    ],
-    "layer": [
-      {
-        "mark": "arc",
-        "encoding": {
-          "theta": {"field": "count", "type": "quantitative"},
-          "color": {
-            "field": "selfMade",
-            "type": "nominal",
-            "scale": {
-              "domain": ["TRUE", "FALSE"],
-              "range": ["#38b9d0", "#f6c6ff"]
-            },
-            "legend": null
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 400,
+  "height": 300,
+  "config": {
+    "background": "#202020d6"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/TayQing/3179/refs/heads/main/Billionaires%20Statistics%20Dataset%202.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {
+      "aggregate": [{"op": "count", "as": "count"}],
+      "groupby": ["selfMade"]
+    }
+  ],
+  "layer": [
+    {
+      "mark": "arc",
+      "encoding": {
+        "theta": {"field": "count", "type": "quantitative"},
+        "color": {
+          "field": "selfMade",
+          "type": "nominal",
+          "scale": {
+            "domain": ["TRUE", "FALSE"],
+            "range": ["#38b9d0", "#f6c6ff"]
           },
-          "tooltip": [  
-            {"field": "selfMade", "type": "nominal", "title": "Self-Made Status"},
-            {"field": "count", "type": "quantitative", "title": "Number of Billionaires"}
-          ]
-        }
-      },
-      {
-        "mark": {
-          "type": "text",
-          "radius": 80,
-          "dx": 8,
-          "dy": -35,
-          "fontSize": 16,
-          "font": "Didot"
+          "legend": null
         },
-        "encoding": {
-          "text": {
-            "condition": [
-              {"test": "datum.selfMade === 'TRUE'", "value": "Self Made"},
-              {"test": "datum.selfMade === 'FALSE'", "value": "Non Self Made"}
-            ],
-            "value": ""
-          },
-          "theta": {"field": "count", "type": "quantitative"},
-          "color": {"value": "#202020d6"}
-        }
+        "tooltip": [  
+          {"field": "selfMade", "type": "nominal", "title": "Self-Made Status"},
+          {"field": "count", "type": "quantitative", "title": "Number of Billionaires"}
+        ]
       }
-    ]
-  }
-  
+    },
+    {
+      "mark": {
+        "type": "text",
+        "radius": 80,
+        "dx": 8,
+        "dy": -35,
+        "fontSize": 16,
+        "font": "Didot"
+      },
+      "encoding": {
+        "text": {
+          "condition": [
+            {"test": "datum.selfMade === 'TRUE'", "value": "Self Made"},
+            {"test": "datum.selfMade === 'FALSE'", "value": "Non Self Made"}
+          ],
+          "value": ""
+        },
+        "theta": {"field": "count", "type": "quantitative"},
+        "color": {"value": "#202020d6"}
+      }
+    }
+  ]
+}
