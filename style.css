@@ -22,7 +22,7 @@ h1 span:last-child {
 }
 
 .intro-paragraph {
-  font-size: 25px;
+  font-size: 20px;
   color: #cfcfcf;
   text-align: center;
   max-width: 80%;
@@ -44,12 +44,12 @@ h1 span:last-child {
 }
 
 h2 {
-  font-size: 45px;
+  font-size: 40px;
   color: #ead66a;
 }
 
 p {
-  font-size: 25px;
+  font-size: 20px;
   color: #cfcfcf;
 }
 

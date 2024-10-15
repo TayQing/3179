@@ -15,7 +15,7 @@
         "min": 0,
         "max": 2500000,
         "step": 50000,
-        "name": "Minimum Wealth (in $M): "
+        "name": "Minimum Wealth ($M): "
       }
     }
   ],
@@ -67,7 +67,7 @@
             "range": ["#dedede", "#fffac8", "#fdee87", "#fde64b", "#fce205", "#ffc30b","#f9a602","#c29200"]
           },
           "legend": {
-            "title": "Total Wealth (in $M)",
+            "title": "Total Wealth ($M)",
             "orient": "right",
             "titleFont": "Didot",
             "labelFont": "Didot",
