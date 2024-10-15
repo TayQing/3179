@@ -25,7 +25,7 @@
             "type": "nominal",
             "scale": {
               "domain": ["TRUE", "FALSE"],
-              "range": ["#73bdae", "#e73c30"]
+              "range": ["#38b9d0", "#f6c6ff"]
             },
             "legend": null
           },
@@ -53,7 +53,7 @@
             "value": ""
           },
           "theta": {"field": "count", "type": "quantitative"},
-          "color": {"value": "#ffffff"}
+          "color": {"value": "#202020d6"}
         }
       }
     ]
