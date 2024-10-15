@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "width": 800,
+  "width": 700,
   "height": 400,
   "padding": 2,
   "config": {"background": "#202020d6"},
