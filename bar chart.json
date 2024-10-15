@@ -15,12 +15,24 @@
       "grid": false 
     }
   },
+  "params": [
+    {
+      "name": "Category_selection",
+      "bind": {
+        "input": "select",
+        "options": [null, "Automotive", "Technology", "Fashion & Retail", "Finance & Investments", "Media & Entertainment", "Telecom", "Diversified", "Food & Beverage", "Logistics", "Gambling & Casinos", "Manufacturing", "Real Estate", "Metals & Mining", "Energy", "Healthcare", "Service", "Construction & Engineering", "Sports"],
+        "labels": ["Show All", "Automotive", "Technology", "Fashion & Retail", "Finance & Investments", "Media & Entertainment", "Telecom", "Diversified", "Food & Beverage", "Logistics", "Gambling & Casinos", "Manufacturing", "Real Estate", "Metals & Mining", "Energy", "Healthcare", "Service", "Construction & Engineering", "Sports"],
+        "name": "Select Category: "
+      }
+    }
+  ],
   "data": {
     "url": "https://raw.githubusercontent.com/TayQing/3179/refs/heads/main/Billionaires%20Statistics%20Dataset%202.csv",
     "format": {"type": "csv"}
   },
   "transform": [
-    {"filter": "datum.rank <= 20"}  
+    {"filter": "datum.rank <= 20"},
+    {"filter": "Category_selection == null || datum.category == Category_selection"}
   ],
   "layer": [
     {
